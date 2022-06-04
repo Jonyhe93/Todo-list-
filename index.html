@@ -1,14 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <title>Todo List App | CodingNepal</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 
 <body>
+  <div class="wrapper">
+    <div class="task-input">
+      <nav>
+        <form class="flex" action="#">
+          <select class="elejir_prioridad"
+            onchange="mostrarValor(this.options[this.selectedIndex].innerHTML); mostrarValor2(this.value);">
+
+            <option value="0">Prioridad</option>
+            <option value="1">Urgente</option>
+            <option value="2">Mensual</option>
+            <option value="3">Diaria</option>
+
+          </select>
+          <input type="text" placeholder="Añade nueva Tarea">
+        </form>
+      </nav>
+    </div>
+    <div class="controls">
+      <div class="filters">
+        <span class="active" id="all">Todas</span>
+        <span id="pending">Pendiente</span>
+        <span id="completed">Completed</span>
+      </div>
+      <button class="clear-btn">Borrar</button>
+    </div>
+    <ul class="task-box"></ul>
+  </div>
+
+  <script src="script.js"></script>
 
 </body>
 
